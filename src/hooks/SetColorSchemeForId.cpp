@@ -5,8 +5,6 @@
 #include "GlobalNamespace/ColorSchemesSettings.hpp"
 #include "GlobalNamespace/ColorScheme.hpp"
 
-
-
 MAKE_HOOK_MATCH(
     ColorSchemesSettings_SetColorSchemeForId, 
     &GlobalNamespace::ColorSchemesSettings::SetColorSchemeForId, 
@@ -16,9 +14,7 @@ MAKE_HOOK_MATCH(
 ) {
     ColorSchemesSettings_SetColorSchemeForId(self, value);
 
-    if(modManager.initialColorsSet){
-        modManager.UpdateColors();
-    }
+    modManager._postfix_ColorSchemesSettings_SetColorSchemeForId();
 }
 
 void QonsistentSaberColors::_Hook_ColorSchemesSettings_SetColorSchemeForId(){

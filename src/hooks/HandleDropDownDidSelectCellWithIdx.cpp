@@ -13,7 +13,7 @@ MAKE_HOOK_MATCH(
 ) {
     ColorsOverrideSettingsPanelController_HandleDropDownDidSelectCellWithIdx(self, dropDownWithTableView, idx);
 
-    modManager.UpdateColors();
+    modManager._postfix_ColorsOverrideSettingsPanelController_HandleDropDownDidSelectCellWithIdx(); 
 }
 
 void QonsistentSaberColors::_Hook_ColorsOverrideSettingsPanelController_HandleDropDownDidSelectCellWithIdx(){

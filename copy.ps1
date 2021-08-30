@@ -6,5 +6,8 @@ if ($?) {
         if ($args[0] -eq "--log") {
             & $PSScriptRoot/start-logging.ps1
         }
+        if ($args[0] -eq "--modLog") {
+            & $PSScriptRoot/start-logging.ps1 --modLog
+        }
     }
 }

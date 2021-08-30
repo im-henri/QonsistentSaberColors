@@ -12,3 +12,7 @@ if ($args[0] -eq "--file") {
      echo "Logging and saving to file!"
      (adb logcat -T "$timestamp" --pid $bspid | Select-String -pattern "(QuestHook|modloader|AndroidRuntime)") | Tee-Object -FilePath $PSScriptRoot/logcat.log
 }
+if ($args[0] -eq "--modLog") {
+    echo "Start logging!"
+    adb logcat | Select-String -pattern "QonsistentSaberColors"
+}

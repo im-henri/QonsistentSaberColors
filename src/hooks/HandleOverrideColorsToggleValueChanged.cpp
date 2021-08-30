@@ -12,7 +12,7 @@ MAKE_HOOK_MATCH(
 ) {
     ColorsOverrideSettingsPanelController_HandleOverrideColorsToggleValueChanged(self, isOn);
 
-    modManager.UpdateColors();
+    modManager._postfix_ColorsOverrideSettingsPanelController_HandleOverrideColorsToggleValueChanged();
 }
 
 void QonsistentSaberColors::_Hook_ColorsOverrideSettingsPanelController_HandleOverrideColorsToggleValueChanged(){

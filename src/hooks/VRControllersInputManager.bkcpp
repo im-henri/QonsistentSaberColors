@@ -12,7 +12,7 @@ MAKE_HOOK_MATCH(
     GlobalNamespace::OculusVRHelper* self
 ) {
     OculusVRHelper_FixedUpdate(self);
-    modManager.FixedUpdate(self);
+    modManager.fixedUpdate();
 }
 
 
