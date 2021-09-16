@@ -332,6 +332,23 @@ void QonsistentSaberColors::_update_coloring_objects(){
 }
 
 
+#include "GlobalNamespace/OVRSkeletonRenderer.hpp"
+
+/*void QonsistentSaberColors::_Update_FingerSaberColors(){
+    auto rHandTracking_go = UnityEngine::GameObject::Find(il2cpp_utils::createcsstr("HandTracking_container/rightHandAnchor/rightHandTracking"));
+    if(!rHandTracking_go)
+        return;
+    auto lHandTracking_go = UnityEngine::GameObject::Find(il2cpp_utils::createcsstr("HandTracking_container/leftHandAnchor/leftHandTracking"));
+    if(!lHandTracking_go)
+        return;
+    
+    auto rightOVRSkeletonRenderer = rHandTracking_go->GetComponent<GlobalNamespace::OVRSkeletonRenderer*>();
+    rightOVRSkeletonRenderer->skeletonMaterial->SetColor(il2cpp_utils::createcsstr("_Color"), colB);
+
+    auto leftOVRSkeletonRenderer  = lHandTracking_go->GetComponent<GlobalNamespace::OVRSkeletonRenderer*>();
+    leftOVRSkeletonRenderer->skeletonMaterial->SetColor(il2cpp_utils::createcsstr("_Color"), colA);
+}*/
+
 void QonsistentSaberColors::UpdateColors(){
 
     auto PlayerDataModel_go = UnityEngine::GameObject::Find(il2cpp_utils::createcsstr("PlayerDataModel(Clone)"));
@@ -354,7 +371,9 @@ void QonsistentSaberColors::UpdateColors(){
     // LaserPointer color
     _Update_LaserPointerColor();
     
-    
+    // If FingerSaber exists, change hand colors
+    //_Update_FingerSaberColors();
+
     // Update QosMenuPointer Left/Right
     // Note Order in this if statement is very imporant.
     // -- cpp "&&" guarantees left-to-right evaluation, meaning the getconfig().value() does not cause error in case qos does not exists. 

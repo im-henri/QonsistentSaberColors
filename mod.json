@@ -4,14 +4,15 @@
     "name": "QonsistentSaberColors",
     "id": "QonsistentSaberColors",
     "author": "Henri",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "packageId": "com.beatgames.beatsaber",
-    "packageVersion": "1.16.4",
-    "description": "Menu saber colors reflect in game saber colors.",
+    "coverImage": "Cover.jpg",
+    "packageVersion": "1.17.1",
+    "description": "Menu saber colors reflect in game saber colors. @drumtool#4435",
     "modFiles": [
         "libQonsistentSaberColors.so"
     ],
     "libraryFiles": [
-        "libbeatsaber-hook_2_2_5.so"
+        "libbeatsaber-hook_2_3_0.so"
     ]
 }

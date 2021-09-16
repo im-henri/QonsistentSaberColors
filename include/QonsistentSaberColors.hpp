@@ -39,7 +39,7 @@ class QonsistentSaberColors{
         // Updates colors of sabers. (Either original sabers or qosmetics sabers)
         void UpdateColors();  
         
-        //void fixedUpdate();
+        //void _Update_FingerSaberColors();
 
         // Postfix methods for Hooks to call. (Should not be called anywhere manually).
         void _postfix_SetSceneActive(UnityEngine::SceneManagement::Scene& scene);
@@ -64,6 +64,9 @@ class QonsistentSaberColors{
         void _UpdateQosMenuPointerTrails();
         // Qos saber color update
         bool _UpdateQosMenuPointerColor(UnityEngine::Color col, bool rightHand);
+
+        // Finger Saber Finger Trail Colors
+        //void _Update_FingerSaberColors();
 
         // Sets _coloringObjectsDirty to true. Meaning that required gameobjects need to be found again with UnityEngine..Find(..).
         void _SetColoringObjectsDirty();
