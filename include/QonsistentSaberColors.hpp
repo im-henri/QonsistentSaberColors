@@ -60,11 +60,14 @@ class QonsistentSaberColors{
         // Original saber glow color updates. 
         void _SetGlowColors(UnityEngine::Color colA, UnityEngine::Color colB);
 
+
+    #if QOSMETICS_API_EXISTS
         // Qos saber trail color update
         void _UpdateQosMenuPointerTrails();
         // Qos saber color update
         bool _UpdateQosMenuPointerColor(UnityEngine::Color col, bool rightHand);
-
+    #endif
+    
         // Finger Saber Finger Trail Colors
         //void _Update_FingerSaberColors();
 

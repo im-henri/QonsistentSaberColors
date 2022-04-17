@@ -12,6 +12,10 @@
 // Hooking
 #include "beatsaber-hook/shared/utils/hooking.hpp"
 
+// Change this to true whenever qosmetics gets updated
+#define QOSMETICS_API_EXISTS false
+
+#define USE_CODEGEN_FIELDS
 
 // Define these functions here so that we can easily read configuration and log information from other files
 Logger& getLogger();

@@ -25,7 +25,7 @@ namespace ModDebugUtils{
         auto componentArr = gameobj->GetComponents<T>();
         std::stringstream buff;
         for (int i=0; i<componentArr->Length(); i++){
-            auto comp = (*componentArr)[i];
+            auto comp = (componentArr)[i];
             auto name = comp->ToString();
             if(name) buff << to_utf8(csstrtostr(name)).c_str() << "\n";
         }
@@ -38,7 +38,7 @@ namespace ModDebugUtils{
         auto componentArr = gameobj->GetComponentsInChildren<T>();
         std::stringstream buff;
         for (int i=0; i<componentArr->Length(); i++){
-            auto comp = (*componentArr)[i];
+            auto comp = (componentArr)[i];
             auto name = comp->ToString();
             if(name) buff << to_utf8(csstrtostr(name)).c_str() << "\n";
         }
@@ -55,7 +55,7 @@ namespace ModDebugUtils{
         auto allObject = UnityEngine::Resources::FindObjectsOfTypeAll(csTypeOf(UnityEngine::GameObject*));
         std::stringstream buff;
         for(int i=0; i<allObject->Length(); i++){
-            auto go_asObj = (*allObject)[i];
+            auto go_asObj = (allObject)[i];
             //getLogger().info("Found items: %i", i);
             if (
                 !(go_asObj->get_hideFlags() == UnityEngine::HideFlags::NotEditable || go_asObj->get_hideFlags() == UnityEngine::HideFlags::HideAndDontSave)
