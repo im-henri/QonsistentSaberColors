@@ -1,9 +1,9 @@
 name: Build
 
 env:
-  module_id: playlistmanager
-  cache-name: playlistmanager_cache
-  qmodName: PlaylistManager
+  module_id: qonsistentsabercolors
+  cache-name: qonsistentsabercolors_cache
+  qmodName: QonsistentSaberColors
 
 on:
   push:
